@@ -33,7 +33,7 @@ class MenuController extends Controller
             'parent_id' => $request->parent_id,
             'slug' => Str::slug($request->name)
         ]);
-        return redirect()->route('admin.menus.index');
+        return redirect()->route('menus.index');
     }
     public function edit(Request $request, $id)
     {
@@ -48,11 +48,11 @@ class MenuController extends Controller
             'parent_id' => $request->parent_id,
             'slug' => Str::slug($request->name)
         ]);
-        return redirect()->route('admin.menus.index');
+        return redirect()->route('menus.index');
     }
     public function delete($id)
     {
         $this->menu->find($id)->delete();
-        return redirect()->route('admin.menus.index');
+        return redirect()->route('menus.index');
     }
 }
