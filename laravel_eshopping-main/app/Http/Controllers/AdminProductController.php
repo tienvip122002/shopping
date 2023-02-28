@@ -82,6 +82,7 @@ class AdminProductController extends Controller
                 }
             }
             //Insert tags for products
+            $tagIds = [];
             if (!empty($request->tags)) {
                 //Insert to tags
                 foreach ($request->tags as $tagItem) {
@@ -139,6 +140,7 @@ class AdminProductController extends Controller
                 }
             }
             //Insert tags for products
+            $tagIds = [];
             if (!empty($request->tags)) {
                 //Insert to tags
                 foreach ($request->tags as $tagItem) {
